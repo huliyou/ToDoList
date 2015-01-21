@@ -183,6 +183,7 @@
 				TargetAttributes = {
 					DC6645D91A5D52B100CDD819 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = YZS43ZVZ7N;
 					};
 					DC6645F21A5D52B100CDD819 = {
 						CreatedOnToolsVersion = 6.1.1;
