@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fI8-UI-pjd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--New Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ETAddUIViewCtrl" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -66,19 +67,29 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Item" id="y1G-ZU-IJw">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bDC-IK-wuO"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="orS-U4-klB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bDC-IK-wuO">
+                            <connections>
+                                <segue destination="CBc-At-nN9" kind="unwind" unwindAction="unwindToList:" id="YTp-6n-Bro"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="orS-U4-klB">
+                            <connections>
+                                <segue destination="CBc-At-nN9" kind="unwind" unwindAction="unwindToList:" id="Spi-AC-mjF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="CBc-At-nN9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1801.5" y="395"/>
         </scene>
         <!--To Do List-->
         <scene sceneID="HBl-vS-1Qv">
             <objects>
-                <tableViewController id="rZB-x9-dBN" sceneMemberID="viewController">
+                <tableViewController id="rZB-x9-dBN" customClass="ETListUITableViewCtrl" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LhS-JC-1XL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

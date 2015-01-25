@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ETAddToDoItemUIViewCtrl : UIViewController
+@interface ETAddUIViewCtrl : UIViewController
+
+- (IBAction) unwindToList:(UIStoryboardSegue *) segue;
 
 @end
