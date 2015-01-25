@@ -16,6 +16,12 @@
 
 @implementation ETToDoItem
 
+- (void) setItemName:(NSString *)itemName
+{
+    _itemName = itemName;
+    _createDate = [NSDate date];
+}
+
 - (void) markedAsCompleted:(BOOL)isComplete
 {
     if (isComplete) {

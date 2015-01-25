@@ -10,4 +10,6 @@
 
 @interface ETListUITableViewCtrl : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *toDoItems;
+
 @end
