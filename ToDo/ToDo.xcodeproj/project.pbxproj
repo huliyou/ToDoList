@@ -14,6 +14,8 @@
 		E8B745EE1A7350AB00713CFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B745ED1A7350AB00713CFB /* Images.xcassets */; };
 		E8B745F11A7350AB00713CFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B745EF1A7350AB00713CFB /* LaunchScreen.xib */; };
 		E8B745FD1A7350AB00713CFB /* ToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B745FC1A7350AB00713CFB /* ToDoTests.m */; };
+		E8EC12221A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC12211A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.m */; };
+		E8EC12251A74FF0E0013D665 /* ETListUITableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC12241A74FF0E0013D665 /* ETListUITableViewCtrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		E8B745F61A7350AB00713CFB /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B745FB1A7350AB00713CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8B745FC1A7350AB00713CFB /* ToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTests.m; sourceTree = "<group>"; };
+		E8EC12201A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETAddToDoItemUIViewCtrl.h; sourceTree = "<group>"; };
+		E8EC12211A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETAddToDoItemUIViewCtrl.m; sourceTree = "<group>"; };
+		E8EC12231A74FF0E0013D665 /* ETListUITableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETListUITableViewCtrl.h; sourceTree = "<group>"; };
+		E8EC12241A74FF0E0013D665 /* ETListUITableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETListUITableViewCtrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +87,14 @@
 		E8B745DF1A7350AB00713CFB /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				E8B745E41A7350AB00713CFB /* AppDelegate.h */,
-				E8B745E51A7350AB00713CFB /* AppDelegate.m */,
 				E8B745E71A7350AB00713CFB /* ViewController.h */,
 				E8B745E81A7350AB00713CFB /* ViewController.m */,
 				E8B745EA1A7350AB00713CFB /* Main.storyboard */,
-				E8B745ED1A7350AB00713CFB /* Images.xcassets */,
-				E8B745EF1A7350AB00713CFB /* LaunchScreen.xib */,
 				E8B745E01A7350AB00713CFB /* Supporting Files */,
+				E8EC12201A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.h */,
+				E8EC12231A74FF0E0013D665 /* ETListUITableViewCtrl.h */,
+				E8EC12241A74FF0E0013D665 /* ETListUITableViewCtrl.m */,
+				E8EC12211A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.m */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -96,6 +102,10 @@
 		E8B745E01A7350AB00713CFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8B745EF1A7350AB00713CFB /* LaunchScreen.xib */,
+				E8B745E41A7350AB00713CFB /* AppDelegate.h */,
+				E8B745E51A7350AB00713CFB /* AppDelegate.m */,
+				E8B745ED1A7350AB00713CFB /* Images.xcassets */,
 				E8B745E11A7350AB00713CFB /* Info.plist */,
 				E8B745E21A7350AB00713CFB /* main.m */,
 			);
@@ -221,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8B745E91A7350AB00713CFB /* ViewController.m in Sources */,
+				E8EC12221A74FEC50013D665 /* ETAddToDoItemUIViewCtrl.m in Sources */,
 				E8B745E61A7350AB00713CFB /* AppDelegate.m in Sources */,
 				E8B745E31A7350AB00713CFB /* main.m in Sources */,
+				E8EC12251A74FF0E0013D665 /* ETListUITableViewCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +427,7 @@
 				E8B746021A7350AB00713CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8B746031A7350AB00713CFB /* Build configuration list for PBXNativeTarget "ToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +436,7 @@
 				E8B746051A7350AB00713CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

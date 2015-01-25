@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fI8-UI-pjd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--New Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -25,12 +25,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PIp-va-I6N" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="1Yb-H3-wVr"/>
                             <constraint firstAttribute="trailing" secondItem="PIp-va-I6N" secondAttribute="trailing" constant="20" symbolic="YES" id="877-rg-kj6"/>
+                            <constraint firstItem="PIp-va-I6N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="BDG-in-xBC"/>
                             <constraint firstItem="PIp-va-I6N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="Ckd-s0-QVV"/>
-                            <constraint firstItem="PIp-va-I6N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="M98-MV-pFg"/>
+                            <constraint firstItem="PIp-va-I6N" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Jzh-Pk-kMQ"/>
                             <constraint firstAttribute="trailing" secondItem="PIp-va-I6N" secondAttribute="trailing" constant="20" symbolic="YES" id="VNn-Ku-fOg"/>
-                            <constraint firstItem="PIp-va-I6N" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="dQI-mf-P94"/>
-                            <constraint firstItem="PIp-va-I6N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="i7q-JF-d7X"/>
                             <constraint firstItem="PIp-va-I6N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="jO0-YV-h8c"/>
                             <constraint firstItem="PIp-va-I6N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="pIo-IF-x4O"/>
                         </constraints>
@@ -39,12 +39,12 @@
                                 <exclude reference="PIp-va-I6N"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="1Yb-H3-wVr"/>
                                 <exclude reference="877-rg-kj6"/>
+                                <exclude reference="BDG-in-xBC"/>
                                 <exclude reference="Ckd-s0-QVV"/>
-                                <exclude reference="M98-MV-pFg"/>
+                                <exclude reference="Jzh-Pk-kMQ"/>
                                 <exclude reference="VNn-Ku-fOg"/>
-                                <exclude reference="dQI-mf-P94"/>
-                                <exclude reference="i7q-JF-d7X"/>
                                 <exclude reference="jO0-YV-h8c"/>
                                 <exclude reference="pIo-IF-x4O"/>
                             </mask>
@@ -54,21 +54,75 @@
                                 <include reference="PIp-va-I6N"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="1Yb-H3-wVr"/>
                                 <exclude reference="877-rg-kj6"/>
+                                <include reference="BDG-in-xBC"/>
                                 <exclude reference="Ckd-s0-QVV"/>
-                                <include reference="M98-MV-pFg"/>
+                                <include reference="Jzh-Pk-kMQ"/>
                                 <exclude reference="VNn-Ku-fOg"/>
-                                <include reference="dQI-mf-P94"/>
-                                <include reference="i7q-JF-d7X"/>
                                 <exclude reference="jO0-YV-h8c"/>
                                 <exclude reference="pIo-IF-x4O"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="New Item" id="y1G-ZU-IJw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bDC-IK-wuO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="orS-U4-klB"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="406"/>
+            <point key="canvasLocation" x="1801.5" y="395"/>
+        </scene>
+        <!--To Do List-->
+        <scene sceneID="HBl-vS-1Qv">
+            <objects>
+                <tableViewController id="rZB-x9-dBN" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LhS-JC-1XL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="TDListCell" id="bDG-Xt-0jo">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TDListCell" tableViewCell="bDG-Xt-0jo" id="Dsc-pQ-eEl">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rZB-x9-dBN" id="r6y-Jk-eRw"/>
+                            <outlet property="delegate" destination="rZB-x9-dBN" id="ddX-Fc-Wzo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="To Do List" id="vA6-g4-xOa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aUt-Sb-OH6">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="34V-VU-4qk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="is3-OV-m6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="395"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Afk-38-mND">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fI8-UI-pjd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9SF-cf-ckG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rZB-x9-dBN" kind="relationship" relationship="rootViewController" id="Cdy-zz-R23"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yS6-Of-J6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517.5" y="395"/>
         </scene>
     </scenes>
 </document>
