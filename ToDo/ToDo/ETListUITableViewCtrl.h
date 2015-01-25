@@ -11,5 +11,6 @@
 @interface ETListUITableViewCtrl : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *toDoItems;
+- (IBAction) unwindToList:(UIStoryboardSegue *) segue;
 
 @end

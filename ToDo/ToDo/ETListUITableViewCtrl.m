@@ -8,6 +8,7 @@
 
 #import "ETListUITableViewCtrl.h"
 #import "ETToDoItem.h"
+#import "ETAddUIViewCtrl.h"
 
 @implementation ETListUITableViewCtrl
 
@@ -23,10 +24,12 @@
 {
     ETToDoItem *fst = [[ETToDoItem alloc] init];
     fst.itemName = @"first item";
+    fst.completed = false;
     [self.toDoItems addObject:fst];
     
     ETToDoItem *snd = [[ETToDoItem alloc] init];
     snd.itemName = @"second item";
+    snd.completed = false;
     [self.toDoItems addObject:snd];
 }
 
@@ -50,12 +53,35 @@
     ETToDoItem *item = [self.toDoItems objectAtIndex:indexPath.row];
     
     cell.textLabel.text = item.itemName;
-    //cell.detailTextLabel.text = (NSString*)item.createDate;
     cell.detailTextLabel.text = [item.createDate description];
+    cell.accessoryType = item.completed ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:false];
+    
+    
+    ETToDoItem *item = [self.toDoItems objectAtIndex:indexPath.row];
+    item.completed = !item.completed;
+    item.createDate = item.createDate;
+    item.itemName = item.itemName;
+    
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+}
 
+- (IBAction) unwindToList:(UIStoryboardSegue *) segue
+{
+    ETAddUIViewCtrl* source = [segue sourceViewController];
+    ETToDoItem *item = source.toDoItem;
+    
+    if (item != nil) {
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];
+    }
+}
 
 @end

@@ -78,6 +78,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="orS-U4-klB" id="yV9-mF-mg3"/>
+                        <outlet property="textField" destination="PIp-va-I6N" id="KNs-pV-5io"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <exit id="CBc-At-nN9" userLabel="Exit" sceneMemberID="exit"/>
@@ -93,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="TDListCell" textLabel="i69-rt-emk" detailTextLabel="L3A-Su-lhv" style="IBUITableViewCellStyleSubtitle" id="bDG-Xt-0jo">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="TDListCell" textLabel="i69-rt-emk" detailTextLabel="L3A-Su-lhv" style="IBUITableViewCellStyleSubtitle" id="bDG-Xt-0jo">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TDListCell" tableViewCell="bDG-Xt-0jo" id="Dsc-pQ-eEl">
                                     <autoresizingMask key="autoresizingMask"/>

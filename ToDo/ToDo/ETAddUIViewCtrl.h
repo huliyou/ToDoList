@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ETToDoItem.h"
 
 @interface ETAddUIViewCtrl : UIViewController
 
-- (IBAction) unwindToList:(UIStoryboardSegue *) segue;
+
+@property (nonatomic, strong) ETToDoItem * toDoItem;
 
 @end
